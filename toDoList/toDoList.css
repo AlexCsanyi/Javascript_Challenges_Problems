@@ -1,0 +1,115 @@
+:root {
+  --clr-primary: #484d5c;
+  --clr-light: #c0ccd4;
+  --clr-dark: #333;
+  --clr-warning: rgb(99, 36, 36);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+body {
+  font-family: "Cardo", serif;
+  background-color: var(--clr-primary);
+  color: var(--clr-light);
+  margin: 0;
+  font-size: 1.5rem;
+  display: grid;
+  grid:
+    "header header header header" auto
+    "...... lists active ......" auto /
+    1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #ffce00;
+}
+
+.title {
+  grid-area: header;
+  text-align: center;
+  font-size: calc(7vw + 2rem);
+  letter-spacing: 2px;
+}
+
+.all-tasks {
+  grid-area: lists;
+}
+
+.task-list {
+  line-height: 1.7;
+  font-size: 1.2rem;
+  list-style: circle;
+  padding-left: 1.1em;
+}
+
+form {
+  display: flex;
+}
+
+.btn {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  color: var(--clr-light);
+  padding: 0;
+}
+
+.btn.create {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin-right: 0.25em;
+  transition: opacity 250ms ease-in-out;
+}
+
+.btn.create:hover {
+  opacity: 0.7;
+}
+
+.new {
+  background: transparent;
+  border: 0;
+  color: var(--clr-light);
+  border-bottom: 1px solid currentColor;
+  font-size: inherit;
+  outline: none;
+
+  transition: border-bottom 150ms ease-in;
+  order: 2;
+  width: 70%;
+}
+
+.new:focus {
+  border-bottom-width: 3px;
+}
+
+.new:focus::placeholder {
+  opacity: 0.3;
+}
+
+.new.list {
+  font-size: 1.2rem;
+}
+
+.active-list {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+    10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
+}
+
+.todo-list {
+  grid-area: active;
+}
