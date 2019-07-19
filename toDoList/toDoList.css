@@ -1,6 +1,6 @@
 :root {
-  --clr-primary: #484d5c;
-  --clr-light: #c0ccd4;
+  --clr-primary: #18181e;
+  --clr-light: #dec79b;
   --clr-dark: #333;
   --clr-warning: rgb(99, 36, 36);
 }
@@ -33,7 +33,7 @@ h5,
 h6 {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
-  color: #ffce00;
+  color: var(--clr-light);
 }
 
 .title {
@@ -103,13 +103,36 @@ form {
 }
 
 .active-list {
-  color: #ffffff;
+  letter-spacing: 1px;
   font-weight: 900;
-  font-size: 1.3rem;
-  text-shadow: 0px 15px 5px rgba(0, 0, 0, 0.1),
+  font-size: 1.5rem;
+  text-shadow: 0px 15px 5px rgba(1, 0, 0, 0.5),
     10px 20px 5px rgba(0, 0, 0, 0.05), -10px 20px 5px rgba(0, 0, 0, 0.05);
 }
 
 .todo-list {
+  --spacer: 2rem;
+
   grid-area: active;
+  background: var(--clr-dark);
+}
+
+.todo-header {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: var(--spacer);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-title {
+  margin: 0 1em 0 0;
+}
+
+.task-count {
+  margin: 0;
+}
+
+.todo-body {
+  padding: var(--spacer);
 }
