@@ -9,6 +9,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="toDoList.css" />
+    <script defer src="toDoList.js"></script>
     <title>Journal</title>
   </head>
   <body>
@@ -16,16 +17,17 @@
 
     <div class="all-tasks">
       <h2 class="task-list-title">My Lists</h2>
-      <ul class="task-list">
+      <ul class="task-list" data-lists>
         <li class="list-name active-list">Youtube</li>
         <li class="list-name">Work</li>
         <li class="list-name">Grocery</li>
       </ul>
 
-      <form action="">
+      <form action="" data-new-list-form>
         <input
           type="text"
           class="new list"
+          data-new-list-input
           placeholder="new list name"
           aria-label="new list name"
         />
@@ -81,7 +83,7 @@
 
         <div class="delete-stuff">
           <button class="btn delete">Clear Completed tasks</button>
-          <button class="btn delete">Delete List</button>
+          <button class="btn delete" data-delete-list-button>Delete List</button>
         </div>
       </div>
     </div>
