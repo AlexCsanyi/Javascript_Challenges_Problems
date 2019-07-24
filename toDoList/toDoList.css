@@ -96,6 +96,10 @@ form {
   padding: 0;
 }
 
+.btn:focus {
+  outline: none;
+}
+
 .btn.create {
   font-size: 1.5rem;
   font-weight: 900;
