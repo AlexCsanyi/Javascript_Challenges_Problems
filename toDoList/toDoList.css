@@ -25,6 +25,10 @@ body {
     1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;
 }
 
+body::-webkit-scrollbar {
+  width: 0 !important;
+}
+
 @media screen and (max-width: 820px) {
   body {
     grid:
@@ -246,7 +250,7 @@ form {
   position: absolute;
   width: 100%;
   left: 0;
-  bottom: -35px;
+  bottom: -45px;
 }
 
 .btn {
@@ -256,6 +260,19 @@ form {
   transition: color 500ms ease-in-out;
 }
 
+.btn.delete {
+  background-color: var(--clr-light);
+  color: var(--clr-primary);
+  border-radius: 2em;
+  padding: 7px;
+  transition: background-color color 500ms ease-in-out;
+}
+
 .btn.delete:hover {
-  color: var(--clr-warning);
+  background-color: var(--clr-warning);
+  color: #fff;
+}
+
+.btn.delete:focus {
+  outline: none;
 }
