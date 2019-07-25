@@ -47,6 +47,24 @@ body::-webkit-scrollbar {
   }
 }
 
+@media screen and (max-width: 420px) {
+  body {
+    grid:
+      "header header header" auto
+      ". lists ." auto
+      ". active ." auto /
+      1fr minmax(100px, 450px) 1fr;
+    font-size: 1.2rem;
+  }
+  .all-tasks {
+    margin-left: 10px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
 h1,
 h2,
 h3,
